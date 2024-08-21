@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple Choice Question Input</title>
+    <link rel="stylesheet" href="../css/add-questions.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+  <header> 
+    <a  id="home" href="index(teacherStudentPage).HTML" ><i class="fa-solid fa-house-chimney"></i></a>
+    <h1>Multiple Choice Question Input</h1>
+  </header>
+  <main>
+    <div id="questionForm" class="question-container">
+        <div id="textOfQuation">
+          <label for="question">Question:</label>
+          <input type="text" id="question" name="question">
+        </div>
+        <div class="choices-container">
+            <label for="choice1">Choice 1:</label>
+            <input type="text" id="choice1" name="choice1">
+            <label for="choice2">Choice 2:</label>
+            <input type="text" id="choice2" name="choice2">
+            <label for="choice3">Choice 3:</label>
+            <input type="text" id="choice3" name="choice3">
+            <label for="choice4">Choice 4:</label>
+            <input type="text" id="choice4" name="choice4">
+            <label for="choice5">Choice 5:</label>
+            <input type="text" id="choice5" name="choice5">
+        </div>
+        
+        <label>Correct Answers:</label>
+        <div class="button-container">
+            <button type="button" id="correct1" onclick="toggleCorrectAnswer(1)">Choice 1</button>
+            <button type="button" id="correct2" onclick="toggleCorrectAnswer(2)">Choice 2</button>
+            <button type="button" id="correct3" onclick="toggleCorrectAnswer(3)">Choice 3</button>
+            <button type="button" id="correct4" onclick="toggleCorrectAnswer(4)">Choice 4</button>
+            <button type="button" id="correct5" onclick="toggleCorrectAnswer(5)">Choice 5</button>
+        </div>
+        <div class="centerbutton">
+        <button class="button-30" role="button" type="button" onclick="addQuestion()">Add Question</button>
+      </div>
+      </div>
+    <script src="../js/add-questions.js">
+    </script>
+</body>
+</html>

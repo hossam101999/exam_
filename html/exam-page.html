@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Page</title>
+    <link rel="stylesheet" href="../css/stylefinal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header>
+        <h1>Exam Page</h1>
+    </header>
+    <main id="main">
+
+        <artical class="timeout-page" id="timeoutPage" style="display: none;">
+            <h2>Timeout Page</h2>
+            <p>Dear <span id="timeoutUserName"></span>, you did not submit the exam in time.</p>
+            <p id="changeGrade"><span id="gradesUserName"></span> your final result:</p>
+            <div class="percentage">Your Score: <span id="timeoutPercentageScore">0</span>%</div>
+        </artical>
+        <div class="grades-page" id="gradesPage" style="display: none;">
+            <h2>Grades Page</h2>
+            <p id="changeGrade"><span id="timeoutUserName"></span>, your final result:</p>
+            <div class="percentage">Your Score: <span id="gradesPercentageScore">0</span>%</div>
+        </div>
+        <div class="container" id="examContainer">
+            <div class="timeAns">
+
+                <div id="timer">
+                    <h2>Time Left: <span id="timeLeft"></span></h2>
+                    <div id="questionCounter">
+                        <p id="answeredQuestionsCount">Answered: 0</p>
+                        <p id="totalQuestionsCount">Total: 0</p>
+                        <p id="remainingQuestionsCount">Remaining: 0</p>
+                    </div>
+
+                </div>
+                <progress id="progressBar" class="progress-bar" value="0" max="100"></progress>
+
+            </div>
+            <div class="exam-content">
+                <div class="question" id="questionContainer">
+                    <h2 id="questionText"></h2>
+                    <div class="choices" id="choicesContainer"></div>
+                    <div class="buttons">
+                        <button id="prevButton" style="display: none;">Previous Question</button>
+                        <button id="markButton">Mark Question</button>
+                        <button id="nextButton">Next Question</button>
+                    </div>
+                    <button id="submitButton" style="display: none;">Submit Exam</button>
+                </div>
+                <div class="mark-list" id="markedList">
+                    <h3>Marked Questions</h3>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="../js/exam.js">
+
+        
+    </script>
+</body>
+
+</html>
